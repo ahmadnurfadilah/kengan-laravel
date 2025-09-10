@@ -35,4 +35,12 @@ return [
         ],
     ],
 
+    'twitterapi' => [
+        'key' => env('TWITTERAPI_KEY'),
+    ],
+
+    'openrouter' => [
+        'key' => env('OPENROUTER_API_KEY'),
+    ],
+
 ];
