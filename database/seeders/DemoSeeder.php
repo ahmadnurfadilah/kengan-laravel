@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use App\Http\Integrations\TwitterAPI\Requests\GetUserInfoRequest;
 use App\Http\Integrations\TwitterAPI\TwitterAPI;
 use App\Models\Campaign\Campaign;
-use App\Models\Project;
+use App\Models\Project\Project;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;

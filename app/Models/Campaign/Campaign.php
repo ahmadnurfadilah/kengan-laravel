@@ -2,7 +2,7 @@
 
 namespace App\Models\Campaign;
 
-use App\Models\Project;
+use App\Models\Project\Project;
 use App\Models\User;
 use App\Models\Tweet;
 use Illuminate\Database\Eloquent\Model;
