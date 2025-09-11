@@ -2,6 +2,7 @@
 
 namespace App\Models\Campaign;
 
+use App\Models\Project;
 use App\Models\User;
 use App\Models\Tweet;
 use Illuminate\Database\Eloquent\Model;
@@ -10,7 +11,7 @@ class Campaign extends Model
 {
     protected $fillable = [
         'owner_id',
-        'twitter_handle',
+        'project_id',
         'status',
         'title',
         'slug',
@@ -37,6 +38,11 @@ class Campaign extends Model
     public function owner()
     {
         return $this->belongsTo(User::class, 'owner_id');
+    }
+
+    public function project()
+    {
+        return $this->belongsTo(Project::class, 'project_id');
     }
 
     public function users()

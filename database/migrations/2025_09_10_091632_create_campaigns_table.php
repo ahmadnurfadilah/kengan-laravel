@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('campaigns', function (Blueprint $table) {
             $table->id();
             $table->foreignUuid('owner_id')->constrained('users')->onDelete('cascade');
-            $table->string('twitter_handle')->nullable()->index();
+            $table->foreignId('project_id')->nullable()->constrained('projects')->onDelete('cascade');
             $table->enum('status', ['draft', 'pending', 'active', 'completed'])->default('draft');
             $table->string('title');
             $table->string('slug')->unique();
